@@ -1,0 +1,754 @@
+#!/bin/bash
+#This final project is an infiltration game
+playagain=1
+
+while [ $playagain -eq 1 ]
+do
+	#Monday
+
+	echo 'Input player name' 
+	read name 
+	clear
+	echo 'You are in the 1920s'
+	sleep 2
+	echo 'Today is Monday June 2'
+	sleep 2
+	echo 'Its raining cats and dogs outside'
+	sleep 2
+	echo 'You are in your secret head quarters'
+	sleep 2
+	echo "Your name is $name and you work for the CIA"
+	sleep 2
+	echo 'In bursts your boss Mr. Johnson' 
+	sleep 2
+	echo 'He slams a heap of papers on your desk'
+	sleep 2
+	echo 'He tells you to get busy, with a slight smirk'
+	sleep 2
+	echo 'You wish your office was a bit more secretive...'
+	sleep 1
+	echo 'Do you'  
+	echo '1) Read the papers'
+	echo '2) Get a cup of Joe'
+	read papers
+	clear
+	case $papers in
+	"1")
+	echo You start reading the papers;;
+	"2")
+	echo The Joe was delicious. Now back to work;;
+	esac
+	echo The papers talk about a new Drug called BASH
+	sleep 3
+	echo AKA Bourne Again Super Heroine
+	sleep 3
+	echo Effects of the drug include talking in binary and extreme hallucinations
+	sleep 3
+	echo Your mission is to infiltrate the gang supplying this dangerous drug
+	sleep 3 
+	echo The gang is under the control of the vicious urug
+	sleep 2
+	echo The file says that there will be a major hand off at the annual Masquerade which is this friday
+	sleep 3
+	echo Until then, gather as much intel as possible
+	sleep 2
+	echo End of Monday
+	sleep 4
+	clear
+
+	#Tuesday
+
+	echo "It is Tuesday. The Penelope Masquerade takes place Friday."
+	sleep 1
+	echo "It is time to get down to business"
+	sleep 1
+	echo "First you explore the Penelope Manor"
+	sleep 1
+	echo "You sneak into the Penelope Manor."
+	
+	room=0
+	manor=1
+	roomnav=0
+
+	echo "The entrance is a grand entrance like every proper manor should have."
+	sleep 1
+	echo "Suddenly the wind slams the door shut and you can't open it back up."
+	sleep 1
+	echo "Looks like you will have to find another exit."
+	sleep 1
+	
+	while [ $manor -eq 1 ]
+	do
+		case $room in
+		"0")
+			echo "You are in the main entrance."
+			sleep 1
+			echo "It's is sooooo grand."
+			read -p "Do you go left (1) or right (2): " roomnav
+			
+			if [ $roomnav -eq 1 ]
+			then
+				room=1
+		
+			else
+				room=2
+			fi
+			clear;;
+		"1")
+			echo "You are now in the main ballroom."
+			sleep 1
+			echo "This is where the masquerade will probably occur"
+			sleep 1
+			read -p "Do you go left (1) or right (2): " roomnav
+		
+			if [ $roomnav -eq 1 ]
+			then
+				room=3
+		
+			else
+				room=0
+			fi
+			clear;;
+		"2")
+			echo "You are in the kitchen."
+			sleep 1
+			echo "Lots of pointy knives and pans and stuff"
+			sleep 1
+			read -p "Do you go left (1) or right (2): " roomnav
+	
+			if [ $roomnav -eq 1 ]
+			then
+				room=5
+			else
+				room=4
+			fi
+			clear;;
+		"3")
+			echo "You are in the dining room."
+			sleep 1
+			echo "Such large, very nice, wow."
+			sleep 1
+			read -p "Do you go left (1) or right (2): " roomnav
+	
+			if [ $roomnav -eq 1 ]
+			then
+				room=0
+			else
+				room=2
+			fi
+			clear;;
+		"4")
+			echo "You are in the library."
+			sleep 1
+			echo "It is really musty and no one even reads anyway."
+			sleep 1
+			read -p "Do you go left (1) or right (2): " roomnav
+	
+			if [ $roomnav -eq 1 ]
+			then
+				room=1
+			else
+					room=5
+			fi
+			clear;;
+		"5")
+			echo "You are in the servants quarters."
+			sleep 1
+			echo "Quite small, Penelope must be a jerk."
+			sleep 1
+			read -p "Do you go left (1) or right (2): " roomnav
+	
+			if [ $roomnav -eq 1 ]
+			then
+				room=6
+			else
+				room=1
+			fi
+			clear;;
+		"6")
+			echo "Ahh the master bedroom."
+			sleep 1
+			echo "Oh is that a secret exit in the corner."
+			sleep 1
+			echo "That could be useful if you need to escape later."
+			sleep 1
+			echo "Oh look pokemon."
+			read -p "Do you want to play pokemon (y/n)?: " playPokemon
+			
+			while [ $playPokemon == 'y' ]
+			do
+				echo A wild pokechon has appeared
+sleep 1
+echo 'Do you choose to Battle? (y/n)'
+sleep 1
+read Battle
+if [ $Battle = "y" ]
+then 
+	echo "Let's Battle!!"
+else
+	echo You bore. I dont care what you say.
+fi
+sleep 1 
+range=5
+number=$RANDOM
+number=$(($number % $range))
+
+case $number in
+"1") 
+	echo Your opponent is a wild Chiromander;;
+"2") 
+	echo Your opponent is a wild Bulbasaurus;;
+"3")
+	echo Your opponent is a wild Squirturtle;;
+"4")
+	echo Your opponent is a wild Catapi;;
+"5")
+	echo Your opponnet is a wild bushko;;
+esac
+sleep 2
+echo 'Which pokechon do you choose to use?
+1)Pikasnu
+2)Chopmanchan
+3)Rewawa
+4)Psygoose'
+read pokechon
+while [[ $pokechon -gt 4 || $pokechon -le 0 ]]
+	do
+		read -p "Enter a number between 1-4: " pokechon
+	done
+	
+	case $pokechon in
+	"1") 
+		echo Go Pikasnu!;;
+	"2")
+		echo Go Copmanchan!;;
+	"3")
+		echo Go Rewawa!;;
+	"4") 
+		echo Go Psygoose!;;
+
+	esac
+
+	sleep 1
+	echo 'Which attack do you use? Make sure to input number not name' 
+	l=10
+	until [ $l -le 0 ]
+	do
+		if [ $pokechon = 1 ] 
+		then 
+		echo 'Thundershock -1
+Skull Bash -2
+Quick speed -3'
+		elif [ $pokechon = 2 ]
+		then
+		echo 'Mach Punch -1
+Endure -2
+Counter -3'
+		elif [ $pokechon = 3 ] 
+		then 
+		echo 'Hyper Beam -1
+Dragon Pulse -2
+Air Lash -3'
+		elif [ $pokechon = 4 ] 
+		then
+		echo 'Scratch -1
+Water Gun -2
+Fury Swipe -3'
+		fi 
+		read attack
+		if [[ $attack=1 || $attack=2 || $attack=3 ]]
+		then
+			case $attack in
+			"1")
+			play=1
+			range=4
+			number=$RANDOM
+			number=$(($number % $range))
+			if [ $number = "1" ] 
+			then	
+				echo 'It was effective
+	'
+					l=$(($l - 2))
+			elif [ $number = "2" ] 
+			then	
+				echo 'It was effective
+'
+					l=$(($l - 3))
+			elif [ $number = "3" ] 
+			then
+				echo 'It was effective
+'
+					l=$((l - 5))
+			elif [ $number = "4" ]
+			then
+		i=0
+				echo 'It was ineffective
+'	
+				if [ $i -eq 0 ]
+				then
+					l=$(($l - 0))
+					fi
+			fi;;
+		"2") 
+		play=1  
+		range=4
+		number=$RANDOM
+		number=$(($number % $range))
+		       		 if [ $number = "1" ] 
+		       		 then    
+               			 echo 'It was effective
+'
+					l=$((l - 3))
+      		 		elif [ $number = "2" ] 
+       				then    
+        	       			 echo 'It was effective
+'
+					l=$((l - 5))
+       				elif [ $number = "3" ] 
+       				 then    
+					i=0
+					echo 'It was ineffective
+'
+					if [ $i -eq 0 ]
+					then
+						l=$((l - 0))
+					fi
+       				 elif [ $number = "4" ] 
+       				 then    
+				i=0
+				echo 'It was ineffective
+'
+					if [ $i -eq 0 ]
+					then
+				l=$((l - 0))
+				fi
+		fi;;            	
+		"3")
+		play=1
+		range=4
+		number=$RANDOM
+		number=$(($number % $range))
+		 if [ $number = "1" ]
+		                 then
+        	                 echo 'It was effective
+'	
+ 	                               l=$((l - 4))
+ 	                elif [ $number = "2" ]
+ 	                then
+ 	                        echo 'It was effective
+'	
+ 	                               l=$((l - 5))
+ 	                elif [ $number = "3" ]
+ 	                then
+ 	                       i=0
+ 	                       echo 'It was ineffective
+'	
+ 	                               if [ $i -eq 0 ]
+ 	                               then
+       	                                 l=$((l - 0))
+        		                fi
+                 elif [ $number = "4" ]
+                 then
+                        i=0
+                        echo 'It was ineffective
+'
+                                if [ $i -eq 0 ]
+                                then
+                                        l=$((l - 0))
+                                fi
+                fi;;
+		esac
+if [ $l -lt 0 ]
+then
+l=0
+echo "your opponent has 0 HP"
+else
+echo "your opponent has $l HP"
+	fi
+	fi
+done
+echo You have won the battle! :D 
+sleep 1
+echo Opponent Pokechon has fainted
+read -p "Do you want to play again? (y/n): " playPokemon
+		 
+			done
+			manor=0	
+		esac
+			
+	done
+	
+	clear
+	echo "You leave the manor"
+	sleep 1
+	echo "End of Tuesday"
+	sleep 4
+	clear
+
+	#Wednesday
+
+	echo Today you are going to infiltrate the gang
+	sleep 1
+	echo This is a dangerous mission
+	sleep 2
+	echo What do you decide to bring with you?
+	sleep 1
+	echo 'Explosive pen'
+	echo 'Bazooka'
+	echo 'Knife'
+	echo 'Thors Hammer'
+	read weapon
+	case $weapon in
+	"Explosive Pen")
+		echo Good Choice! They will never suspect it!;;
+	"Bazooka")
+		echo Might be a bit too heavy and large... But you know best I suppose...;;
+	"Knife")
+		echo I thought you were more interesting. A knife is literally the MOST boring choice here;;
+	"Thors Hammer")
+		echo Good luck lifting that thing...;;
+	esac
+	sleep 2
+	clear
+	jp2a --color Lounge_00000.jpg
+	echo You are in the gang HQ with your $weapon
+	sleep 1
+	echo Right now you are in the lounge
+	sleep 1
+	echo There is a door on the left as well as one on the right and one straight ahead.
+	sleep 1
+	echo 'Your Objective is to find Urugs quarters and get a sample of BASH'
+	echo '(for purely educational reasons ofcourse)'
+	sleep 1
+	echo Which door do you take?
+	sleep 1
+	echo 'Left=1'
+	echo 'Right=2'
+	echo 'Straight=3'
+	read door
+	while [ $door -ne 3 ]
+	do
+		case $door in
+		"1")
+			clear
+			jp2a --color armory_00000.jpg 			
+			echo "This is the Armory. There is a door to your right and a door straight ahead"
+			read -p "Do you go right (2) or straight (3): " door;; 
+	
+		"2") 
+			clear
+			jp2a --color storage_room_00000.jpg
+			echo "You are now in the Storage room. There is a door to your left and a door straight ahead."  
+			read -p  "Do you go left (1) or straight (3): " door;;
+		esac
+	done
+
+	clear
+	jp2a --color Quarters_00000.jpg
+	echo CONGRATS You have succesfully found Urugs quarters
+	echo "You have found a safe where Urug keeps his BASH"
+	sleep 1
+	echo "What kind of safe is this?"
+	sleep 2
+	clear
+	
+	trashtrayvar=0
+while [ $trashtrayvar -eq 0 ]
+do
+	echo "Answer the riddles to open the safe and get the BASH."
+	read -p 'What is a word that, when said in Pig Latin, could essentially be a synonym of the original word? ' trashtray
+	if [[ $trashtray == 'trash' || $trashtray == 'Trash' || $trashtray == 'TRASH' ]]
+		then echo 'Good job! Next question: '
+			trashtrayvar=1
+	else
+		echo 'Sorry-try again '
+	fi
+done
+
+while [ $trashtrayvar -eq 1 ]
+do
+	read -p ' What is blue and looks like a red shirt?' riddle2
+	if [[ $riddle2 == 'a blue shirt' || $riddle2 == 'A blue shirt' || $riddle2 == 'A Blue Shirt' ]]
+		then echo 'Great job! Last question: '
+			trashtrayvar=2
+	else
+		echo 'My apologies-try again '
+	fi
+done
+
+while [ $trashtrayvar -eq 2 ]
+do
+	read -p 'What is brown and sticky?' riddle3
+	if [[ $riddle3 == 'A stick' || $riddle3 == 'A Stick' || $riddle3 == 'a stick' ]]
+		then echo "Here's your BASH! "
+			trashtrayvar=3
+	else
+		echo "We're sorry for the inconvenience.  Here's a voucher for a free retry "
+	fi
+done	
+
+	sleep 1
+	echo "You head back to your office"
+	sleep 1
+	echo "End of Wednesday"
+	sleep 4
+	clear
+
+	#Thursday
+
+	echo "Today is Thursday. Tomorrow is the big day!"
+	sleep 1
+	echo "Crap! all your preparations have been accomplished."
+	sleep 1
+	echo "What to do...what to do..."
+	sleep 2
+	echo "Is that the BASH that you got from yesterday?"
+	sleep 2
+	echo "How did that get there?"
+	sleep 2
+	echo "Well you shouldn't be wasteful..."
+	sleep 1
+	read -p "Do you take the BASH? 1=yes 2=yes: " tripping
+	sleep 1
+	echo "Let's do this!"
+	sleep 1
+	echo "1 minute: no affect"
+	sleep 2 
+	echo "2 minute: no affect"
+	sleep 2
+	echo "3 minute: no affect"
+	sleep 2
+	echo "4 minute: no affect"
+	sleep 2
+	echo "5 minute: no affect"
+	sleep 2
+	echo "6 minute......."
+	sleep 10
+	echo "01011001 01100101 01100001 00101100 00100000 01110100 01101000 01101111 01110101 01100111 01101000 00100000 01001001 00100000 01110111 01100001 01101100 01101011 00100000 01110100 01101000 01110010 01101111 01110101 01100111 01101000 00100000 01110100 01101000 01100101 00100000 01110110 01100001 01101100 01101100 01100101 01111001 00100000 01101111 01100110 00100000 01110100 01101000 01100101 00100000 01110011 01101000 01100001 01100100 01101111 01110111 00100000 01101111 01100110 00100000 01100100 01100101 01100001 01110100 01101000 00101100 00100000 01001001 00100000 01110111 01101001 01101100 01101100 00100000 01100110 01100101 01100001 01110010 00100000 01101110 01101111 00100000 01100101 01110110 01101001 01101100 00111010 00100000 01100110 01101111 01110010 00100000 01110100 01101000 01101111 01110101 00100000 01100001 01110010 01110100 00100000 01110111 01101001 01110100 01101000 00100000 01101101 01100101 00111011 00100000 01110100 01101000 01111001 00100000 01110010 01101111 01100100 00100000 01100001 01101110 01100100 00100000 01110100 01101000 01111001 00100000 01110011 01110100 01100001 01100110 01100110 00100000 01110100 01101000 01100101 01111001 00100000 01100011 01101111 01101101 01100110 01101111 01110010 01110100 00100000 01101101 01100101 00101110 00100000 01010000 01000101 01001110 01001001 01010011 00100000 01010000 01000101 01001110 01001001 01010011 00100000 01010000 01000101 01001110 01001001 01010011 00100000 01010000 01000101 01001110 01001001 01010011 00101110 00100000 01010111 01101111 01110101 01101100 01100100 00100000 01111001 01101111 01110101 00100000 01100110 01110101 01100011 01101011 00100000 01101101 01100101 00111111 00100000 01001001 00100111 01100100 00100000 01100110 01110101 01100011 01101011 00100000 01101101 01100101 00101110 00100000 01001001 00100111 01100100 00100000 01100110 01110101 01100011 01101011 00100000 01101101 01100101 00100000 01101000 01100001 01110010 01100100 00101110 00100000 01001001 00100111 01100100 00100000 01100110 01110101 01100011 01101011 00100000 01101101 01100101 00100000 01110011 01101111 00100000 01101000 01100001 01110010 01100100 00101110 00100000 01010011 01100001 01111001 00100000 01110100 01101000 01100101 01110010 01100101 00100111 01110011 00100000 01100001 00100000 01110111 01101000 01101001 01110100 01100101 00100000 01101011 01101001 01100100 00100000 01110111 01101000 01101111 00100000 01101100 01101001 01110110 01100101 01110011 00100000 01101001 01101110 00100000 01100001 00100000 01101110 01101001 01100011 01100101 00100000 01101000 01101111 01101101 01100101 00101100 00100000 01100111 01101111 01100101 01110011 00100000 01110100 01101111 00100000 01100001 01101110 00100000 01100001 01101100 01101100 00101101 01110111 01101000 01101001 01110100 01100101 00100000 01110011 01100011 01101000 01101111 01101111 01101100 00101100 00100000 01100001 01101110 01100100 00100000 01101001 01110011 00100000 01110000 01110010 01100101 01110100 01110100 01111001 00100000 01101101 01110101 01100011 01101000 00100000 01101000 01100001 01110110 01101001 01101110 01100111 00100000 01100101 01110110 01100101 01110010 01111001 01110100 01101000 01101001 01101110 01100111 00100000 01101000 01100001 01101110 01100100 01100101 01100100 00100000 01110100 01101111 00100000 01101000 01101001 01101101 00100000 01101111 01101110 00100000 01100001 00100000 01110000 01101100 01100001 01110100 01110100 01100101 01110010 00100000 00101101 00100000 01100110 01101111 01110010 00100000 01101000 01101001 01101101 00100000 01110100 01101111 00100000 01110000 01101001 01100011 01101011 00100000 01110101 01110000 00100000 01100001 00100000 01110010 01100001 01110000 00100000 01110100 01100001 01110000 01100101 00100000 01101001 01110011 00100000 01101001 01101110 01100011 01110010 01100101 01100100 01101001 01100010 01101100 01100101 00100000 01110100 01101111 00100000 01101101 01100101 00101100 00100000 01100010 01100101 01100011 01100001 01110101 01110011 01100101 00100000 01110111 01101000 01100001 01110100 00100000 01110100 01101000 01100001 01110100 00100111 01110011 00100000 01110011 01100001 01111001 01101001 01101110 01100111 00100000 01101001 01110011 00100000 01110100 01101000 01100001 01110100 00100000 01101000 01100101 00100111 01110011 00100000 01101100 01101001 01110110 01101001 01101110 01100111 00100000 01100001 00100000 01100110 01100001 01101110 01110100 01100001 01110011 01111001 00100000 01101100 01101001 01100110 01100101 00100000 01101111 01100110 00100000 01110010 01100101 01100010 01100101 01101100 01101100 01101001 01101111 01101110 00101110 00100000 00100010 01010100 01101000 01100101 00100000 01110000 01100001 01110100 01101000 00100000 01101111 01100110 00100000 01110100 01101000 01100101 00100000 01110010 01101001 01100111 01101000 01110100 01100101 01101111 01110101 01110011 00100000 01101101 01100001 01101110 00100000 01101001 01110011 00100000 01100010 01100101 01110011 01100101 01110100 00100000 01101111 01101110 00100000 01100001 01101100 01101100 00100000 01110011 01101001 01100100 01100101 01110011 00100000 01100010 01111001 00100000 01110100 01101000 01100101 00100000 01101001 01101110 01100101 01110001 01110101 01101001 01110100 01101001 01100101 01110011 00100000 01101111 01100110 00100000 01110100 01101000 01100101 00100000 01110011 01100101 01101100 01100110 01101001 01110011 01101000 00100000 01100001 01101110 01100100 00100000 01110100 01101000 01100101 00100000 01110100 01111001 01110010 01100001 01101110 01101110 01111001 00100000 01101111 01100110 00100000 01100101 01110110 01101001 01101100 00100000 01101101 01100101 01101110 00101110 00100000 01000010 01101100 01100101 01110011 01110011 01100101 01100100 00100000 01101001 01110011 00100000 01101000 01100101 00100000 01110111 01101000 01101111 00101100 00100000 01101001 01101110 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101101 01100101 00100000 01101111 01100110 00100000 01100011 01101000 01100001 01110010 01101001 01110100 01111001 00100000 01100001 01101110 01100100 00100000 01100111 01101111 01101111 01100100 00100000 01110111 01101001 01101100 01101100 00101100 00100000 01110011 01101000 01100101 01110000 01101000 01100101 01110010 01100100 01110011 00100000 01110100 01101000 01100101 00100000 01110111 01100101 01100001 01101011 00100000 01110100 01101000 01110010 01101111 01110101 01100111 01101000 00100000 01110100 01101000 01100101 00100000 01110110 01100001 01101100 01101100 01100101 01111001 00100000 01101111 01100110 00100000 01110100 01101000 01100101 00100000 01100100 01100001 01110010 01101011 01101110 01100101 01110011 01110011 00101100 00100000 01100110 01101111 01110010 00100000 01101000 01100101 00100000 01101001 01110011 00100000 01110100 01110010 01110101 01101100 01111001 00100000 01101000 01101001 01110011 00100000 01100010 01110010 01101111 01110100 01101000 01100101 01110010 00100111 01110011 00100000 01101011 01100101 01100101 01110000 01100101 01110010 00100000 01100001 01101110 01100100 00100000 01110100 01101000 01100101 00100000 01100110 01101001 01101110 01100100 01100101 01110010 00100000 01101111 01100110 00100000 01101100 01101111 01110011 01110100 00100000 01100011 01101000 01101001 01101100 01100100 01110010 01100101 01101110 00101110 00100000 01000001 01101110 01100100 00100000 01001001 00100000 01110111 01101001 01101100 01101100 00100000 01110011 01110100 01110010 01101001 01101011 01100101 00100000 01100100 01101111 01110111 01101110 00100000 01110101 01110000 01101111 01101110 00100000 01110100 01101000 01100101 01100101 00100000 01110111 01101001 01110100 01101000 00100000 01100111 01110010 01100101 01100001 01110100 00100000 01110110 01100101 01101110 01100111 01100101 01100001 01101110 01100011 01100101 00100000 01100001 01101110 01100100 00100000 01100110 01110101 01110010 01101001 01101111 01110101 01110011 00100000 01100001 01101110 01100111 01100101 01110010 00100000 01110100 01101000 01101111 01110011 01100101 00100000 01110111 01101000 01101111 00100000 01100001 01110100 01110100 01100101 01101101 01110000 01110100 00100000 01110100 01101111 00100000 01110000 01101111 01101001 01110011 01101111 01101110 00100000 01100001 01101110 01100100 00100000 01100100 01100101 01110011 01110100 01110010 01101111 01111001 00100000 01001101 01111001 00100000 01100010 01110010 01101111 01110100 01101000 01100101 01110010 01110011 00101110 00100000 01000001 01101110 01100100 00100000 01111001 01101111 01110101 00100000 01110111 01101001 01101100 01101100 00100000 01101011 01101110 01101111 01110111 00100000 01001001 00100000 01100001 01101101 00100000 01110100 01101000 01100101 00100000 01001100 01101111 01110010 01100100 00100000 01110111 01101000 01100101 01101110 00100000 01001001 00100000 01101100 01100001 01111001 00100000 01001101 01111001 00100000 01110110 01100101 01101110 01100111 01100101 01100001 01101110 01100011 01100101 00100000 01110101 01110000 01101111 01101110 00100000 01111001 01101111 01110101 00101110 00100010"
+	sleep 4
+	echo "Woah"
+	sleep 4
+	echo "End of Thursday"
+	sleep 4
+	clear
+
+	#Friday
+
+	echo "Today is the big day."
+	sleep 2
+	echo "Succeed, and the biggest drugoverlord, Urug, is taken down."
+	sleep 2
+	echo "Fail, and...you will probably restart from the last checkpoint."
+	sleep 2
+	echo "Here is the plan: "
+	sleep 2
+	echo "1) Get into the party without arousing suspicion"
+	sleep 2
+	echo "2) Find out where the trade is taking place"
+	sleep 2
+	echo "3) Stop the trade with minimal casualties and arrest Urug"
+	sleep 2
+	echo "4) ???"
+	sleep 2
+	echo "5) Profit"
+	sleep 2
+	clear
+	echo "INSIDE THE CIA VAN OUTSIDE PENELOPE'S MANOR"
+	sleep 1
+	echo "Choose your disguise"
+	sleep 1
+	echo "1) Suit and tie with a hint of Armani"
+	echo "2) Fancy gown that works for any occasion"
+	echo "3) My Little Pony t-shirt that is way too small"
+	echo "4) Your 'Birthday Suit'(WARNING: NOT ADVISED BUT YOU CAN STILL GO FOR IT)"
+	read -p "Choose your fashion: " clothing
+
+	case $clothing in
+	"1")
+		echo "Ahh the James Bond method. Quality!";;
+	"2")
+		echo "Nice selection...unless you are a guy, then thats a titch weird";;
+	"3")
+		echo "#nohate";;
+	"4")
+		echo "...pervert ;)";;
+	esac
+
+	sleep 2
+
+	echo "AT THE PENELOPE MANOR ENTRANCE"
+
+	case $clothing in
+	"1") 
+		echo "Bouncer: Goodevening sir, welcome the the annual Masquerade of Penelope."
+		echo "Dashing suit."
+		sleep 1;;
+	"2")
+		echo "Bouncer: Goodevening ma'am...or sir? (#sdlc)"
+		echo "Lovely gown"
+		sleep 1;;
+	"3")
+		echo "Bouncer: MY LITTLE PONY MY LITTLE PONY AH AH AH AAAAAAAAHHHHHHH!"
+		sleep 1
+		echo "Bouncer: LOVE THAT TEE"
+		sleep 1;;
+	"4")
+		echo "Bouncer: Umm...no, put this on"
+		sleep 1
+		echo "*puts on suit and tie*"
+		sleep 1
+		echo "Bouncer: Better";;
+	esac
+	sleep 2
+
+	play=0
+
+	while [ $play -eq 0  ]
+	do
+		echo "INSIDE THE MANOR"
+
+		echo "There is much a hullaballoo going on around you."
+		sleep 2
+		echo "Many a mask are being worn and the annual Penelope Masquerade twerk sesh is going strong."
+		sleep 2
+		echo "On the stage is DJ Gentleman playing some hopping tunes to match the times."
+		sleep 2
+		echo "A lovely lady comes up to you to ask for a dance."
+		sleep 2
+		echo "As you tango she slips you some BASH and tells you to talk binary to her later."
+		echo "Do you"
+		echo "1) Arrest her on the spot and blow your cover because moral code or something"
+		echo '2) Pocket the BASH and question her to "see where you can get more"'
+		echo "3) Get trippin'"
+		read -p "What do you choose: " decision
+
+		while [ $decision -le 3 ]
+		do
+			if [ $decision -eq 3 ]
+			then
+				echo "You trip hard, blow your cover, and get caught by Urug's henchmen."
+			fi
+
+			case $decision in
+			"1")
+				echo "Your cover is blown and out pops your duel Desert Eagles you had strapped to your back."
+				sleep 2
+				echo 'You yell "YOU ARE UNDER ARREST"'
+				sleep 2
+				echo "Lady: Ah crap it's da police.  *Takes out pistol and starts popping*"
+				echo "Do you"
+				echo "1) Take cover"
+				echo "2) Tackle her to the ground"
+				echo "3) Shoot her dead"
+				read -p "What do you choose: " lady
+
+				case $lady in
+				"1")
+					echo "You book it behind a flipped over table only being grazed by a single bullet."
+					sleep 2
+					echo "With two shots the lady is incapasitated and the guests have fled."
+					sleep 2
+					echo "Oh listen is that a helicopter."
+					sleep 2
+					echo "Well, there goes Urug in his helicopter...looks like you done goofed"
+					decision=4
+					sleep 4
+					clear;;
+				"2")
+					echo "You hit the gun out of her hands and handcuff her to a pole."
+					sleep 2
+					echo "She is out of the way but Urug's henchmen are behind you."
+					sleep 2
+					echo "You are captured. How will you get out of this one."
+					decision=3
+					sleep 3
+					clear;;
+				"3")
+					echo "YOU JUST KILLED SOMEONE...NO!!!!"
+					sleep 4
+					clear
+					break;;
+				esac;;
+			"2")
+				clear
+				echo "You: Say ma'am where did you get this here delicious looking BASH"
+				sleep 2
+				echo "Her: From Urug and his men. I'll take you to them."
+				sleep 2
+				echo "You walk out the room and she hits you with a sledgehammer knocking you out"
+				sleep 2
+				decision=3
+				clear;;
+				
+			"3") 
+				decision=4
+				play=1
+				echo "You wake up tied to a chair in a musty room."
+				sleep 2
+				echo "Urug: WHO ARE YOU!?!"
+				sleep 2
+				echo "You: Just a fellow BASH user. *nervous laugh*"
+				sleep 2
+				echo "Urug: Then take this!!! *throws BASH at your face*"
+				sleep 1
+				echo "Do you"
+				echo "1)Trip hard"
+				echo "2)Trip super hard"
+				sleep 1
+				read -p "Which do you choose: " tripping
+				echo "1 Minute: No affect"
+				sleep 2
+				echo "2 Minute: No affect"
+				sleep 2
+				echo "3 Minute: No affect"
+				sleep 2
+				echo "4 Minute: No affect"
+				sleep 2
+				echo "5 Minute: No affect"
+				sleep 2
+				echo "6 Minute......"
+				sleep 10
+				echo "00100010 01010000 01101000 00100111 01101110 01100111 01101100 01110101 01101001 00100000 01101101 01100111 01101100 01110111 00100111 01101110 01100001 01100110 01101000 00100000 01000011 01110100 01101000 01110101 01101100 01101000 01110101 00100000 01010010 00100111 01101100 01111001 01100101 01101000 00100000 01110111 01100111 01100001 01101000 00100111 01101110 01100001 01100111 01101100 00100000 01100110 01101000 01110100 01100001 01100111 01101110 00100001 00100010"
+				sleep 2
+				if [ $tripping -eq 1 ]
+				then
+					echo "Translation: Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn!"
+					sleep 2
+					echo "Urug: DID YOU JUST SUMMON CTHULU!!!!"
+					sleep 2
+					echo "A Voice: RRRRRRRAAAAAAAAWWWWWWWWWWWRRRRRR"
+					sleep 5
+					echo "And so it came to pass that 1000 years of terror fell upon the world."
+					sleep 2
+					echo "Darkness reigned and there was no good left in the world"
+					echo "Cthulu had claimed the world as his dominion."
+					sleep 2
+					echo "........"
+					sleep 3
+					echo "...but at least you got Urug so that's nice."
+					sleep 5
+					clear
+				else 
+					echo "Translation: Ph'nglui mglw'nafh Reptar R'lyeh wgah'nagl fhtagn!"
+					sleep 2
+					echo "Urug: DID YOU JUST SUMMON REPTAR!!!!"
+					sleep 2
+					echo "A Voice: RRRRRRRAAAAAAAAWWWWWWWWWWWRRRRRR"
+					sleep 5
+					echo "And so it came to pass that 1000 years of terror fell upon the world."
+					sleep 2
+					echo "Darkness reigned and there was no good left in the world"
+					echo "Reptar had claimed the world as his dominion."
+					sleep 2
+					echo "........"
+					sleep 3
+					echo "...but at least you got Urug so that's nice."
+					sleep 5
+					clear
+				fi
+
+				read -p "Do you want to play again? yes=1 no=2: " playagain
+			esac
+		done
+	done
+done
